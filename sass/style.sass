@@ -1,6 +1,7 @@
 .container
-    width: 1440px
+    max-width: 1440px
     margin: 0 auto
+    position: relative
 
 .header
     background-image: url('../images/first-screen-image.png')
@@ -10,15 +11,20 @@
     width: 100%
     height: 993px
     overflow: hidden
+    position: relative
 
-.header-top
-    display: flex
-    align-items: center
-    justify-content: space-around
+.header-top-bg
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 100%), linear-gradient(270deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.24) 51%, rgba(255, 255, 255, 0) 100%)
     backdrop-filter: blur(9px)
     margin-top: 30px
+    
+.header-top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0 auto
     padding: 12px
+    width: 1170px
 
 nav.menu ul
     display: flex
@@ -67,7 +73,7 @@ nav.menu ul li a
     line-height: 26px
 
 .join-now-btn
-    border: 1px solid red
+    position: relative
 
 .join-now-btn a
     text-decoration: none
@@ -78,14 +84,83 @@ nav.menu ul li a
     text-transform: uppercase
     line-height: 20px
     letter-spacing: 1.60px
-    z-index: 2
 
-// .join-now-btn:before
-//     content: ''
-//     position: absolute
-//     bottom: 20%
-//     left: 0
-//     width: 100%
-//     height: 20%
-//     background-color: orange
-//     z-index: 1
+.join-now:before
+    content: ''
+    position: absolute
+    width: 112px
+    height: 13px
+    opacity: 0.30
+    background: #F1897B
+    bottom: 0
+    left: 10px
+
+/* section-info */
+.main
+    width: 1170px
+    margin: 0 auto
+    
+.section-info
+    top: 712px
+    position: absolute
+    display: flex
+    align-items: center
+
+.info-right
+    display: flex
+    position: absolute
+    max-width: 770px
+    height: 580px
+    left: 400px
+    opacity: 0.90
+    background: white
+    border: 1px solid red
+
+.info-list
+    width: 370px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+
+.info-text
+    width: 400px 
+
+.divider::after
+    content: ''
+    display: block
+    width: 100px
+    border: 1px #85BBB1 solid
+
+.currency
+   text-align: center
+   color: #E4E4E4
+   font-size: 40px
+   font-family: Playfair Display
+   font-weight: 400
+   line-height: 50px
+    
+.amount
+    text-align: center
+    color: #262A3F
+    font-size: 68px
+    font-family: Playfair Display
+    font-weight: 400
+    line-height: 72px
+
+.description
+    <div style="opacity: 0.80; text-align: center; color: #262A3F; font-size: 18px; font-family: Lato; font-weight: 300; line-height: 26px; word-wrap: break-word">Market cap potential</div>
+
+.info-text
+    margin-top: 45px
+    opacity: 0.80
+    color: #262A3F
+    font-size: 18px
+    font-family: Lato
+    font-weight: 300
+    line-height: 26px
+
+    
+    /* END section-info */
+
+
