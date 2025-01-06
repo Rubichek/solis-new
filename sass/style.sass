@@ -46,7 +46,7 @@ nav.menu ul li a
 
 .header-content
     width: 523px
-    margin: 260px 0 0 135px
+    margin: 150px 0 0 135px
 
 .header-content h1
     color: #262A3F
@@ -101,20 +101,26 @@ nav.menu ul li a
     margin: 0 auto
     
 .section-info
-    top: 712px
-    position: absolute
+    // top: 712px
+    // position: absolute
     display: flex
     align-items: center
+    margin-top: -280px
+
+.section-info-img
+    z-index: 1
 
 .info-right
     display: flex
-    position: absolute
+    // position: absolute
     max-width: 770px
     height: 580px
     left: 400px
     opacity: 0.90
     background: white
-    border: 1px solid red
+    margin-left: -100px
+    z-index: 1
+    // border: 1px solid red
 
 .info-list
     width: 370px
@@ -131,6 +137,7 @@ nav.menu ul li a
     display: block
     width: 100px
     border: 1px #85BBB1 solid
+    margin: 0 auto
 
 .currency
    text-align: center
@@ -149,9 +156,15 @@ nav.menu ul li a
     line-height: 72px
 
 .description
-    <div style="opacity: 0.80; text-align: center; color: #262A3F; font-size: 18px; font-family: Lato; font-weight: 300; line-height: 26px; word-wrap: break-word">Market cap potential</div>
+    opacity: 0.80
+    text-align: center
+    color: #262A3F
+    font-size: 18px
+    font-family: Lato
+    font-weight: 300
+    line-height: 26px
 
-.info-text
+.info-text p
     margin-top: 45px
     opacity: 0.80
     color: #262A3F
@@ -160,7 +173,166 @@ nav.menu ul li a
     font-weight: 300
     line-height: 26px
 
+.contact-sales-btn
+    position: relative
+
+.contact-sales-btn a
+    text-decoration: none
+    color: #F1897B
+    font-size: 20px
+    font-family: Lato
+    font-weight: 700
+    text-transform: uppercase
+    line-height: 20px
+    letter-spacing: 1.60px
+
+.contact-sales:before
+    content: ''
+    position: absolute
+    width: 172px
+    height: 13px
+    opacity: 0.30
+    background: #F1897B
+    bottom: 0
+    left: 10px
+
+/* END section-info */
+
+
+/* section-benefits */
+
+.section-benefits
+    height: 620px
+    display: flex
+    flex-wrap: wrap
+    gap: 30px
+    margin-top: 120px
+    // border: 1px solid red
+    // align-items: flex-end
+
+.section-benefits-item
+    flex: 1 1 calc(50% - 20px)
+    box-sizing: border-box
+    max-width: 570px
+    height: 250px
+    // border: 1px solid red
+    padding: 50px 35px 52px 35px
+    position: relative
+
+.section-benefits-title
+    color: #262A3F
+    font-size: 40px
+    font-family: Playfair Display
+    font-weight: 400
+    line-height: 48px
+    margin: 0
+
+.highlight
+    color: #85BBB1
+    font-size: 40px
+    font-family: Playfair Display
+    font-style: italic
+    font-weight: 400
+    line-height: 48px
+
+.section-benefits-description
+    opacity: 0.80
+    color: #262A3F
+    font-size: 18px
+    font-family: Lato
+    font-weight: 300
+    line-height: 26px
     
-    /* END section-info */
+
+.section-benefits-item-divider
+    position: absolute
+    display: block
+    width: 570px
+    height: 0px
+    border: 1px #E4E4E4 solid //#E4E4E4
+    box-sizing: border-box
+    left: 0
+    top: 0
+
+/* END section-benefits */
 
 
+
+/* section-quote */
+.quote-background
+    background-image: url('../images/quote-background.svg')
+    background-size: cover /* Картинка подстраивается под размер блока */
+    background-position: center /* Центрирование фонового изображения */
+    padding: 60px 20px /* Внутренние отступы для контента */
+    color: #fff /* Белый текст */
+    text-align: center /* Центровка текста */
+    height: 400px /* Высота блока */
+    display: flex /* Flexbox для центровки текста */
+    justify-content: center /* Центровка по горизонтали */
+    align-items: center /* Центровка по вертикали */
+
+.section-quote
+    position: relative
+
+.quote-icon
+    position: absolute
+    left: 100px
+    top: 70px
+
+.section-quote-text
+    position: relative
+
+.section-quote-description
+    position: absolute
+    width: 710px
+    height: 140px
+    color: white
+    font-size: 32px
+    font-family: Lato
+    font-weight: 400
+    line-height: 46px
+    letter-spacing: 1.28px
+    top: 100px
+    left: 160px
+    margin: 0
+    
+.author-quote
+    position: absolute
+    color: white
+    font-size: 20px
+    font-family: Playfair Display
+    font-style: italic
+    font-weight: 400
+    line-height: 20px
+    letter-spacing: 1.60px
+    margin-top: 40px
+    top: 280px
+    left: 160px
+
+/* END section-quote */
+
+
+/* section-video */
+
+.section-video
+    width: 970px
+    height: 601px
+    border-radius: 32px
+    border: 1px #E4E4E4 solid
+    margin: 0 auto
+    margin-top: 120px
+    position: relative
+
+.section-video::after
+    content: ''
+    position: absolute
+    width: 13px
+    height: 13px
+    border-radius: 9999px
+    border: 1px red solid //#E4E4E4
+    top: 50%
+    
+
+
+
+/* END section-video */
