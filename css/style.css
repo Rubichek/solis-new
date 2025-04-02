@@ -4,6 +4,17 @@
 
   --link-color: #262A3F;
   --currency-color: #E4E4E4;
+  --bg-header: url("../images/bg-light.jpg");
+
+  --color-url-forms: #F1897B
+}
+
+:root[data-theme-name="dark"] {
+  --bg-header: url("../images/bg-dark.jpg");
+
+  --link-color: white;
+
+  --color-url-forms: #53F3CD
 }
 
 * {
@@ -31,7 +42,7 @@ a {
 }
 
 .header {
-  background-image: url("../images/first-screen-image.jpg");
+  background-image: var(--bg-header);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -81,7 +92,8 @@ nav.menu ul li a {
 }
 
 .header-content {
-  width: 523px;
+  max-width: 523px;
+  width: 90%;
   margin: 150px 0 0 135px;
 }
 
@@ -103,13 +115,15 @@ nav.menu ul li a {
 }
 
 .header-content p {
-  width: 439px;
+  max-width: 439px;
+  width: 90%;
   opacity: 0.8;
   color: var(--link-color);
   font-size: 18px;
   font-family: var(--secondary-font);
   font-weight: 300;
   line-height: 26px;
+  overflow-wrap: break-word;
 }
 
 .join-now-head-btn {
@@ -117,7 +131,7 @@ nav.menu ul li a {
 }
 
 .join-now-head-btn a {
-  color: #F1897B;
+  color: var(--color-url-forms);
   font-size: 20px;
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -132,7 +146,7 @@ nav.menu ul li a {
   width: 112px;
   height: 13px;
   opacity: 0.3;
-  background: #F1897B;
+  background: var(--color-url-forms);
   bottom: 0;
   left: 10px;
 }
@@ -215,8 +229,10 @@ nav.menu ul li a {
 }
 
 .section-info-img {
-  z-index: 1;
+  max-width: 570px;
   width: 100%;
+  z-index: 1;
+  
 }
 
 .info-right {
@@ -557,6 +573,8 @@ nav.menu ul li a {
 }
 
 /* END section-video */
+
+
 /* section-promises */
 .section-promises {
   margin-top: 120px;
@@ -565,11 +583,16 @@ nav.menu ul li a {
   position: relative;
 }
 
+.promises-img {
+  max-width: 600px;
+  width: 100%;
+}
+
 .promises-list {
   display: flex;
   max-width: 770px;
-  width: 90%;
-  height: 450px;
+  width: 100%;
+  max-height: 450px;
   opacity: 0.9;
   background: white;
   /* margin-left: -201px; */
@@ -899,6 +922,11 @@ p.contact-us-title {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+
+  .header-content {
+    margin: 0 auto;
+  }
+
   .info-right {
     left: 0;
   }
@@ -925,4 +953,339 @@ p.contact-us-title {
   .contact-sales-btn {
     margin-top: 25px;
   }
+
+  .section-quote-description {
+    left: 10px;
+    font-size: 1.5rem;
+  }
+
+  .author-quote {
+    left: auto;
+  }
+
+  .video-player {
+    min-height: auto;
+  }
+
+  .video-player::before {
+    width: 25px;
+    height: 25px;
+    right: -8px;
+  }
+
+  .play {
+    width: 60px;
+    height: 60px;
+  }
+
+  .play svg {
+      width: 20px;
+  }
+
+  .reviews {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Burger Menu */
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+  }
+
+  .burger span {
+    width: 100%;
+    height: 3px;
+    background: black;
+    transition: 0.3s;
+  }
+
+  nav.menu ul {
+    flex-direction: column;
+  }
+
+  .menu ul {
+    /* background: silver; */
+    /* transform: translate(-50%, -50%); */
+    background-color: salmon;
+    transition: all 0.5s;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 100%;
+    background: white;
+    transition: 0.3s;
+  }
+
+  .menu.open {
+    left: 0;
+  }
+
+  .burger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* END Burger Menu */
+
+  .section-promises {
+    justify-content: center;
+  }
+
+  .item-left {
+    display: none;
+  }
+
+  .promises-list {
+    justify-content: center;
+    right: auto;
+  }
+
+  .section-benefits-item {
+    flex: none;
+  }
+
+  .section-reviews-title {
+    margin-top: 50px;
+  }
+  
+  .section-reviews p:nth-child(3) {
+    margin-bottom: 50px;
+  }
+
+  .section-contact {
+    flex-direction: column;
+    margin: 0 15px;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+  /* Burger Menu */
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+  }
+
+  .burger span {
+    width: 100%;
+    height: 3px;
+    background: black;
+    transition: 0.3s;
+  }
+
+  nav.menu ul {
+    flex-direction: column;
+  }
+
+  .menu ul {
+    /* background: silver; */
+    /* transform: translate(-50%, -50%); */
+    background-color: salmon;
+    transition: all 0.5s;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 100%;
+    background: white;
+    transition: 0.3s;
+  }
+
+  .menu.open {
+    left: 0;
+  }
+
+  .burger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* END Burger Menu */
+
+  .header-content {
+    margin: 0 auto;
+  }
+
+  .info-list {
+    display: none;
+  }
+
+  .info-right {
+    left: 0;
+    /* width: 200px; Ограничиваем ширину */
+    /* white-space: nowrap; Запрещаем перенос строк */
+    /* overflow: hidden; Скрываем лишний текст */
+    /* text-overflow: ellipsis; Добавляем многоточие */
+    /* max-height: 336px; */
+    /* overflow: hidden; Скрытие лишнего текста */
+    /* display: -webkit-box; Включаем флексбокс для ограничения строк */
+    /* -webkit-line-clamp: 5; Ограничение количества строк */
+    /* -webkit-box-orient: vertical; Вертикальная ориентация */
+  }
+
+  .info-text p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Ограничение до 3 строк */
+    overflow: hidden;
+  }
+
+  .contact-sales-btn {
+    margin-top: 35px;
+  }
+
+  .reviews {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-contact {
+    flex-direction: column;
+    margin: 0 15px;
+  }
+
+  .promises-list {
+    justify-content: center;
+    right: auto;
+  }
+
+  .item-left {
+    display: none;
+  }
+
+  .promises-list {
+    opacity: 0.7;
+  }
+
+  li.item-3 {
+    margin: 0 auto;
+  }
+
+  .section-reviews-title {
+    margin-top: 50px;
+  }
+  
+  .section-reviews p:nth-child(3) {
+    margin-bottom: 50px;
+  }
+
+  .api-title,
+  .api-title-highlight {
+    font-size: 28px;
+  }
+
+
+  .video-player {
+    min-height: auto;
+  }
+
+  .video-player::after {
+    top: auto;
+  }
+
+  .video-player::before {
+    width: 18px;
+    height: 18px;
+    margin-right: 3px;
+    top: auto;
+  }
+
+  .play {
+    width: 60px;
+    height: 60px;
+  }
+
+  .play svg {
+      width: 20px;
+  }
+
+  .table {
+    margin-top: 60px;
+  }
+
+  .section-quote-description {
+    left: 10px;
+    font-size: 1rem;
+    line-height: 28px;
+  }
+
+  .author-quote {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    bottom: 55px;
+  }
+
+  .author-quote {
+    left: auto;
+  }
+
+  .section-benefits-title,
+  .highlight {
+    font-size: 28px;
+  }
+
+  .section-benefits li:nth-child(1) p:nth-child(3),
+  .section-benefits li:nth-child(3) p:nth-child(3),
+  .section-benefits li:nth-child(4) p:nth-child(3) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Ограничение до 3 строк */
+    overflow: hidden;
+  }
+
+  .section-benefits-item {
+    padding-top: 25px;
+  }
+
+  .section-quote {
+    margin-top: 35px;
+  }
+
 }
