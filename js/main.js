@@ -10,16 +10,41 @@ burger.addEventListener('click', () => {
 
 
 // Color Theme
-const buttonThemeLight = document.querySelector('.theme-button-light')
-const buttonThemeDark = document.querySelector('.theme-button-dark')
 
-buttonThemeLight.addEventListener('click', () => {
-  document.documentElement.dataset['themeName'] = 'light'
-});
+document.documentElement.dataset.themeName = localStorage.getItem('theme') || 'light';
 
-buttonThemeDark.addEventListener('click', () => {
-  document.documentElement.dataset['themeName'] = 'dark'
-});
+const themeButton = document.querySelector('.theme-button')
+
+// вешаем событие на кнопку в которо лежат две SVG
+themeButton.addEventListener('click', () => {
+
+  //создаем переменную текушей темы
+  const curretTheme = document.documentElement.dataset.themeName;
+  
+  const newTheme = curretTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.themeName = newTheme;
+  localStorage.setItem('theme', newTheme);
+})
+
+
+
+
+
+
+
+
+
+
+// const iconLight = document.querySelector('.icon-light')
+// const ikonDark = document.querySelector('.icon-dark')
+
+// iconLight.addEventListener('click', () => {
+//   document.documentElement.dataset['themeName'] = 'light'
+// });
+
+// ikonDark.addEventListener('click', () => {
+//   document.documentElement.dataset['themeName'] = 'dark'
+// });
 
 
 

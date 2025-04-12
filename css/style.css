@@ -1,21 +1,44 @@
 :root {
   --secondary-font: 'Lato';
   --title-font: 'Playfair Display';
-
   --link-color: #262A3F;
   --currency-color: #E4E4E4;
   --bg-header: url("../images/bg-light.jpg");
-
-  --color-url-forms: #F1897B
+  --color-url-forms: #F1897B;
+  --span-highlight: #85BBB1;
 }
 
 :root[data-theme-name="dark"] {
   --bg-header: url("../images/bg-dark.jpg");
-
   --link-color: white;
-
-  --color-url-forms: #53F3CD
+  --color-url-forms: #53F3CD;
+  --span-highlight: #689FF2;
 }
+
+.icon-dark {
+  display: block;
+}
+
+.icon-light {
+  display: none;
+}
+
+
+:root[data-theme-name="dark"] .icon-dark {
+  display: none;
+}
+
+:root[data-theme-name="dark"] .icon-light {
+  display: block;
+}
+
+.theme-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+
 
 * {
   margin: 0;
@@ -106,7 +129,7 @@ nav.menu ul li a {
 }
 
 .header-content h1 span {
-  color: #85BBB1;
+  color: var(--span-highlight);
   font-size: 44px;
   font-family: var(--title-font);
   font-style: italic;
@@ -124,6 +147,15 @@ nav.menu ul li a {
   font-weight: 300;
   line-height: 26px;
   overflow-wrap: break-word;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+}
+
+.burger {
+  display: none;
 }
 
 .join-now-head-btn {
