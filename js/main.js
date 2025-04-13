@@ -27,6 +27,16 @@ themeButton.addEventListener('click', () => {
 })
 
 
+// Play YouTube
+
+document.addEventListener('DOMDOMContentLoaded', ()=> {
+  const playButton = document.querySelector('.video-play-button');
+  playButton.addEventListener('click', ()=> {
+    const videoId = 'vnbN9V_2Guk';
+    playVideo(videoId)
+  })
+})
+
 
 
 

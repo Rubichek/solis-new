@@ -86,7 +86,7 @@
                                 <p class="description">Deposited to platform</p>
                             </li>
 
-                            <li class="item">
+                            <li class="item divider">
                                 <span class="amount">12</span>
                                 <p class="description">Stablecoins</p>
                             </li>
@@ -129,8 +129,8 @@
 
                 <div class="section-quote">
                     <div class="quote-background">
-                        <!-- <span class="quote-icon"> -->
-                            <img class="quote-icon" src="images/quote-icon.svg" alt="quote-icon">
+                        <span class="quote-icon"></span>
+                            <!-- <img class="quote-icon" src="images/quote-icon.svg" alt="quote-icon"> -->
                             <blockquote class="section-quote-description">
                                 Solis Group serves as a liquidity nexus that gives stablecoin issuers, holders and exchanges certainty over access and liquidity
                             </blockquote>
@@ -146,18 +146,20 @@
                 <div class="section-video">
                     <div class="table">
                         <div class="video-player">
-                            <video class="poster" src="#" poster="images/screensaver-video.jpg"></video>
+                            <img class="poster" src="images/video-preview.png" alt="Video preview" id="video-cover" />
+                            <!-- <span class="poster"></span> -->
+                            <!-- <video class="poster" src="#" poster="images/screensaver-video.jpg"></video> -->
                             
-                            <div class="play">
-                                <svg width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M32.3175 16.615C33.0301 16.9898 33.0301 18.0102 32.3175 18.385L1.71555 34.4826C1.04965 34.8329 0.249998 34.35 0.249998 33.5976L0.25 1.40242C0.25 0.650009 1.04965 0.167116 1.71555 0.517401L32.3175 16.615Z" fill="#262A3F"/>
+                            <div class="video-play-button" onclick="playVideo('vnbN9V_2Guk')">
+                                <svg class="video-play-icon" width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32.3175 16.615C33.0301 16.9898 33.0301 18.0102 32.3175 18.385L1.71555 34.4826C1.04965 34.8329 0.249998 34.35 0.249998 33.5976L0.25 1.40242C0.25 0.650009 1.04965 0.167116 1.71555 0.517401L32.3175 16.615Z" fill="currentColor"/>
                                 </svg>
                             </div>
                             
                         </div>
                     </div>
                     <div class="feature-text">
-                        <p class="api-title">A <span class="api-title-highlight">powerful API</span> , easy to use user interface</p>
+                        <p class="api-title">A <span class="highlight">powerful API</span> , easy to use user interface</p>
                         <p class="api-description">Our API allows all members to interact with Stablehouse’s platform, from effecting transfers to deposits, withdrawals, creation and redemption and reporting.</p>
                     </div>
                 </div>
@@ -191,7 +193,7 @@
                     </div>
                 </div>
                 <div class="section-reviews">
-                    <h2 class="section-reviews-title">Client  <span>reviews</span></h2>
+                    <h2 class="section-reviews-title">Client  <span class="highlight">reviews</span></h2>
                     <p class="section-reviews-description">Happy clients, happy us. Read our client reviews</p>
                     <p class="section-reviews-description">about the work process and results.</p>
                     <ul class="reviews">
@@ -214,7 +216,7 @@
                 <hr class="custom-hr">
                 <div class="section-contact">
                     <div class="contact-us">
-                        <p class="contact-us-title">Contact <span>our sales team</span></p>
+                        <p class="contact-us-title">Contact <span class="highlight">our sales team</span></p>
                         <p class="contact-us-description">Our team is happy to answer your sales questions.</p>
                         <p class="contact-us-description">Fill out the form and we’ll be in touch as soon as possible.</p>
                     </div>
@@ -239,6 +241,7 @@
             </ul>
         </footer>
     </div>
+        <script src="js/video-player.js"></script>
         <script src="js/main.js"></script>
 </body>
 </html>
