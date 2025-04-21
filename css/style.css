@@ -18,6 +18,8 @@
   --join-now-btn-border-color: #E4E4E4;
   --contact-form-hr-color: #E4E4E4;
   --contact-form-color-border: rgba(38, 42, 63, 0.1);
+  --contact-form-bg-color-input: #ffffff;
+  --contact-form-color-input: #161926;
 }
 
 :root[data-theme-name="dark"] {
@@ -37,6 +39,8 @@
   --join-now-btn-border-color: #515773;
   --contact-form-hr-color: #515773;
   --contact-form-color-border: rgba(255, 255, 255, 0.1);
+  --contact-form-bg-color-input: #161926;
+  --contact-form-color-input: #ffffff;
 }
 
 .icon-dark {
@@ -46,7 +50,6 @@
 .icon-light {
   display: none;
 }
-
 
 :root[data-theme-name="dark"] .icon-dark {
   display: none;
@@ -61,8 +64,6 @@
   background: none;
   cursor: pointer;
 }
-
-
 
 * {
   margin: 0;
@@ -99,7 +100,6 @@ a {
   min-height: 993px;
   overflow: hidden;
   position: relative;
-  background-size: cover;
 }
 
 .header-top-bg {
@@ -132,7 +132,6 @@ nav.menu ul li a {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 1.12px;
-  /* text-decoration: none; */
 }
 
 .logo {
@@ -270,13 +269,12 @@ nav.menu ul li a {
 }
 
 
-
 /* section-info */
 .main {
   width: 1170px;
   max-width: 100%;
   margin: 0 auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .section-info {
@@ -300,11 +298,10 @@ nav.menu ul li a {
   left: 400px;
   opacity: 0.9;
   background: var(--section-info-right);
-  /* margin-left: -172px; */
   z-index: 1;
   position: absolute;
   right: 0;
-  border: 1px solid green
+  /* border: 1px solid green */
 }
 
 .info-list {
@@ -400,8 +397,8 @@ nav.menu ul li a {
   bottom: 0;
   left: 10px;
 }
-
 /* END section-info */
+
 /* section-benefits */
 .section-benefits {
   min-height: 620px;
@@ -455,10 +452,20 @@ nav.menu ul li a {
   border: 0;
   border-top: 1px solid var(--color-divider);
   top: 0;
-  left: -15px;
+  left: 0px;
 }
 
+.section-benefits-item:nth-child(even) hr {
+  right: 0;
+  left: auto;
+}
+
+.section-benefits-item:nth-child(odd) hr {
+  left: 0;
+  right: auto;
+}
 /* END section-benefits */
+
 /* section-quote */
 .quote-background {
   background-image: url("../images/quote-background.jpg");
@@ -493,10 +500,9 @@ nav.menu ul li a {
 .section-quote-description {
   position: absolute;
   max-width: 710px;
-  /* width: 90%; */
   height: 140px;
   color: white;
-  font-size: 2rem; /* 32px */
+  font-size: 2rem;
   font-family: var(--secondary-font);
   font-weight: 400;
   line-height: 46px;
@@ -519,8 +525,8 @@ nav.menu ul li a {
   top: 280px;
   left: 160px;
 }
-
 /* END section-quote */
+
 /* section-video */
 .table {
   max-width: 970px;
@@ -579,11 +585,6 @@ nav.menu ul li a {
 .video {
   margin: 0 70px 0 30px;
 }
-
-/* .screensaver-video {
-  margin-left: 30px;
-  margin-right: 70px;
-} */
 
 .video-play-button {
   position: absolute;
@@ -655,9 +656,7 @@ nav.menu ul li a {
   font-weight: 300;
   line-height: 26px;
 }
-
 /* END section-video */
-
 
 /* section-promises */
 .section-promises {
@@ -685,7 +684,7 @@ nav.menu ul li a {
   gap: 100px;
   position: absolute;
   right: 0;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   padding: 75px 0 75px 70px;
   box-sizing: border-box;
 }
@@ -767,8 +766,8 @@ nav.menu ul li a {
   top: 44px;
   left: 99px;
 }
-
 /* END section-promises */
+
 /* section-reviews */
 .section-reviews-title {
   color: var(--link-color);
@@ -905,7 +904,8 @@ p.contact-us-title {
   border: none;
   border-bottom: 1px solid var(--contact-form-color-border);
   line-height: 1.6;
-  background: #161926;
+  background: var(--contact-form-bg-color-input);
+  color: var(--contact-form-color-input);
 }
 
 .contact-form > input[type=text]::-moz-placeholder, .contact-form > input[type=email]::-moz-placeholder {
@@ -954,12 +954,9 @@ p.contact-us-title {
   background: var(--color-contact-sales);
   margin: 11px 7px 4px 10px;
 }
-
 /* END section-contact *//*# sourceMappingURL=style.css.map */
 
-
 /* Media */
-
 @media (min-width: 1280px) and (max-width: 1439px) {
 
 }
@@ -1179,9 +1176,7 @@ p.contact-us-title {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    
   /* Burger Menu */
-
   .burger {
     display: flex;
     flex-direction: column;
