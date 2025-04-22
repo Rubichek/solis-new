@@ -1,49 +1,41 @@
-document.getElementById("year").textContent = new Date().getFullYear()
+// Burger menu
 
-const burger = document.querySelector('.burger');
-const menu = document.querySelector('.menu');
+document.getElementById("year").textContent = new Date().getFullYear();
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('active');
-  menu.classList.toggle('open');
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".menu");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  menu.classList.toggle("open");
 });
-
 
 // Color Theme
 
-document.documentElement.dataset.themeName = localStorage.getItem('theme') || 'light';
+document.documentElement.dataset.themeName =
+  localStorage.getItem("theme") || "light";
 
-const themeButton = document.querySelector('.theme-button')
+const themeButton = document.querySelector(".theme-button");
 
 // вешаем событие на кнопку в которо лежат две SVG
-themeButton.addEventListener('click', () => {
-
+themeButton.addEventListener("click", () => {
   //создаем переменную текушей темы
   const curretTheme = document.documentElement.dataset.themeName;
-  
-  const newTheme = curretTheme === 'dark' ? 'light' : 'dark';
-  document.documentElement.dataset.themeName = newTheme;
-  localStorage.setItem('theme', newTheme);
-})
 
+  const newTheme = curretTheme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.themeName = newTheme;
+  localStorage.setItem("theme", newTheme);
+});
 
 // Play YouTube
 
-document.addEventListener('DOMDOMContentLoaded', ()=> {
-  const playButton = document.querySelector('.video-play-button');
-  playButton.addEventListener('click', ()=> {
-    const videoId = 'vnbN9V_2Guk';
-    playVideo(videoId)
-  })
-})
-
-
-
-
-
-
-
-
+document.addEventListener("DOMDOMContentLoaded", () => {
+  const playButton = document.querySelector(".video-play-button");
+  playButton.addEventListener("click", () => {
+    const videoId = "vnbN9V_2Guk";
+    playVideo(videoId);
+  });
+});
 
 // const iconLight = document.querySelector('.icon-light')
 // const ikonDark = document.querySelector('.icon-dark')
@@ -55,6 +47,3 @@ document.addEventListener('DOMDOMContentLoaded', ()=> {
 // ikonDark.addEventListener('click', () => {
 //   document.documentElement.dataset['themeName'] = 'dark'
 // });
-
-
-
