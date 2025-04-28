@@ -29,21 +29,21 @@ themeButton.addEventListener("click", () => {
 
 // Play YouTube
 
-document.addEventListener("DOMDOMContentLoaded", () => {
-  const playButton = document.querySelector(".video-play-button");
+document.addEventListener("DOMContentLoaded", function () {
+  const playButton = document.getElementById("playBtn");
+  const poster = document.getElementById("poster");
+  const videoContainer = document.getElementById("videoContainer");
+  const iframe = document.getElementById("videoFrame");
+
   playButton.addEventListener("click", () => {
-    const videoId = "vnbN9V_2Guk";
-    playVideo(videoId);
+    poster.style.opacity = "0";
+
+    setTimeout(() => {
+      poster.style.display = "none";
+    }, 500);
+
+    iframe.src =
+      "https://www.youtube.com/embed/vnbN9V_2Guk?autoplay=1&mute=1&controls=1";
+    videoContainer.style.opacity = "1";
   });
 });
-
-// const iconLight = document.querySelector('.icon-light')
-// const ikonDark = document.querySelector('.icon-dark')
-
-// iconLight.addEventListener('click', () => {
-//   document.documentElement.dataset['themeName'] = 'light'
-// });
-
-// ikonDark.addEventListener('click', () => {
-//   document.documentElement.dataset['themeName'] = 'dark'
-// });
