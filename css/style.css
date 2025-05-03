@@ -308,7 +308,7 @@ nav.menu ul li a {
 .info-right {
   display: flex;
   max-width: 770px;
-  height: 580px;
+  max-height: 580px;
   left: 400px;
   opacity: 0.9;
   background: var(--section-info-right);
@@ -335,7 +335,7 @@ nav.menu ul li a {
   width: 400px;
 }
 
-.divider::after {
+.divider:not(:last-child)::after {
   content: "";
   display: block;
   width: 100px;
@@ -413,7 +413,7 @@ nav.menu ul li a {
 /* END section-info */
 
 /* section-benefits */
-.section-benefits {
+.section-benefits-wrapper {
   min-height: 620px;
   display: flex;
   flex-wrap: wrap;
@@ -429,6 +429,7 @@ nav.menu ul li a {
   height: 250px;
   padding: 50px 35px 52px 35px;
   position: relative;
+  overflow: hidden;
 }
 
 .section-benefits-title {
@@ -593,8 +594,10 @@ nav.menu ul li a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120px;
-  height: 120px;
+  width: 20vw;
+  height: 20vw;
+  max-width: 120px;
+  max-height: 120px;
   background-color: rgba(104, 159, 242, 0.3);
   border-radius: 50%;
   display: flex;
@@ -605,8 +608,8 @@ nav.menu ul li a {
 }
 
 .play-btn svg {
-  width: 41px;
-  height: 45px;
+  width: 41%;
+  height: auto;
   color: rgb(104, 159, 242, 0.8);
 }
 
@@ -640,7 +643,7 @@ nav.menu ul li a {
 }
 
 .feature-text {
-  width: 100%;
+  width: 90%;
   max-width: 970px;
 }
 
@@ -941,12 +944,6 @@ p.section-reviews-description {
 /* END section-contact */ /*# sourceMappingURL=style.css.map */
 
 /* Media */
-@media (min-width: 1280px) and (max-width: 1439px) {
-}
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-}
-
 @media (min-width: 768px) and (max-width: 1023px) {
   .info-right {
     left: 0;
@@ -1000,7 +997,7 @@ p.section-reviews-description {
     left: 0;
   }
 
-  .section-benefits {
+  .section-benefits-wrapper {
     margin-top: 170px;
   }
 
@@ -1032,23 +1029,8 @@ p.section-reviews-description {
     left: auto;
   }
 
-  .video-player {
-    min-height: auto;
-  }
-
-  .video-player::before {
-    width: 25px;
-    height: 25px;
-    right: -8px;
-  }
-
-  .play {
-    width: 60px;
-    height: 60px;
-  }
-
-  .play svg {
-    width: 20px;
+  .table {
+    margin-top: 30px;
   }
 
   .reviews {
@@ -1057,7 +1039,6 @@ p.section-reviews-description {
   }
 
   /* Burger Menu */
-
   .burger {
     display: flex;
     flex-direction: column;
@@ -1122,7 +1103,6 @@ p.section-reviews-description {
   .burger.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-
   /* END Burger Menu */
 
   .section-promises {
@@ -1155,7 +1135,7 @@ p.section-reviews-description {
     margin: 0 15px;
   }
 
-  .section-benefits {
+  .section-benefits-wrapper {
     justify-content: center;
   }
 
@@ -1236,7 +1216,6 @@ p.section-reviews-description {
   .burger.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-
   /* END Burger Menu */
 
   .header-content {
@@ -1251,8 +1230,13 @@ p.section-reviews-description {
     left: 0;
   }
 
+  .section-benefits-wrapper {
+    margin-top: 50px;
+  }
+
   .info-text {
-    width: 100%;
+    /* width: 90%; */
+    margin: 0 auto;
     padding: 25px;
   }
 
@@ -1327,17 +1311,18 @@ p.section-reviews-description {
     top: auto;
   }
 
-  .play {
+  /* .play {
     width: 60px;
     height: 60px;
   }
 
   .play svg {
     width: 20px;
-  }
+  } */
 
   .table {
-    margin-top: 60px;
+    margin-top: 30px;
+    padding: 31px 35px 31px 15px;
   }
 
   .section-quote-description {
@@ -1362,17 +1347,21 @@ p.section-reviews-description {
     font-size: 28px;
   }
 
-  .section-benefits li:nth-child(1) p:nth-child(3),
-  .section-benefits li:nth-child(3) p:nth-child(3),
-  .section-benefits li:nth-child(4) p:nth-child(3) {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; /* Ограничение до 3 строк */
-    overflow: hidden;
+  .section-benefits-wrapper {
+    flex-direction: column;
   }
 
+  /* .section-benefits-wrapper li:nth-child(1) p:nth-child(3),
+  .section-benefits-wrapper li:nth-child(3) p:nth-child(3),
+  .section-benefits-wrapper li:nth-child(4) p:nth-child(3) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  } */
+
   .section-benefits-item {
-    padding-top: 25px;
+    padding: 25px 15px 12px 15px;
   }
 
   .section-quote {
